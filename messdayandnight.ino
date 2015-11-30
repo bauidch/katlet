@@ -23,15 +23,17 @@ void loop()
   
   buttonStatus = digitalRead(buttonPin); 
   if (LOW == buttonStatus) { 
-      if (sensorValue == 12) {
+      if (sensorValue < 12) {
         digitalWrite(ledPin, HIGH);
+        Serial.println("Blackness");
       }
       else {
         Serial.println("Es ist zu hell");
-      	digitalWrite(ledPin, LOW);
+        digitalWrite(ledPin, LOW);
       }
   }
    else { 
       Serial.print("Lightness: ");
       Serial.println(sensorValue);
    }
+}
