@@ -3,7 +3,6 @@
 * Autor: Lukas Bauer
 * Datum: 07.12.2015
 */
-
 int ledPIN = 3;
 int schalter1 = 7;
 int schalter2 = 12;
@@ -34,12 +33,15 @@ void loop()
   }
   else if((st1 == LOW) && (st2 == HIGH)) {
       Serial.println("Schalter 1 ist gedrueckt");
+      digitalWrite(ledPIN,HIGH);
   }
   else if((st1 == HIGH) && (st2 == LOW)) {
       Serial.println("Schalter 2 ist gedrueckt");
+      digitalWrite(ledPIN,HIGH);
   }
   else 
   {
     Serial.println("Etwas anders");
+    digitalWrite(ledPIN,HIGH);
   }
 }
