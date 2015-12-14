@@ -1,7 +1,7 @@
 /*
 * Name: 702_ RegSteur
 * Autor: Lukas Bauer
-* Datum: 07.12.2015
+* Datum: 14.12.2015
 */
 int ledPIN = 3;
 int schalter1 = 7;
